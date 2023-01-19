@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Шоссе, ТТ и Грэвел</title>
+  <link href="./pages/index.css" rel="stylesheet">
+  <link href="./vendor/normalize.css" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <nav class="header__menu">
+        <button class="header__menu-btn"></button>
+        <ul class="header__menu-links">
+          <li>
+            <a href="#" class="header__menu-link link-hover">Покрытия и градиенты</a>
+          </li>
+          <li>
+            <a href="#" class="header__menu-link link-hover">Велосипеды</a>
+          </li>
+          <li>
+            <a href="#" class="header__menu-link link-hover">Тренировки</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="content">
+      <section class="lead">
+        <h1 class="lead__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
+        <p class="lead__subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам –
+          нужно только определиться с выбором велосипеда и отправиться в путь.</p>
+        <button onclick="window.location.href = '#'" class="lead__more-btn">Подробнее</button>
+        <div class="lead__bike">
+          <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+             class="lead__bike-name link-hover" target="_blank">Cannondale Systemsix</a>
+          <div class="lead__line"></div>
+        </div>
+        <div class="lead__img-container">
+          <div class="lead__stiky-container">
+            <div class="lead__stiky-img">
+              <img class="lead__img" src="images/cannondale-systemsix-himod.jpg" alt="велосипед Cannondale Systemsix">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="biker" aria-label="Эдди Меркс">
+        <img src="./images/road-village.jpg" alt="дорога в деревне" class="biker__img">
+        <figure class="biker__quote">
+          <blockquote class="biker__quote-text">
+            «Катайся много или мало, долго или коротко, как хочешь - но
+            катайся»
+          </blockquote>
+          <figcaption>
+            <p class="biker__quote-author">Эдди Меркс</p>
+            <p class="biker__quote-author-subline">Велогонщик</p>
+          </figcaption>
+        </figure>
+      </section>
+      <section class="highway">
+        <h2 class="highway__title">Шоссе</h2>
+        <p class="highway__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
+          или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.
+        </p>
+        <div class="highway__pics">
+          <div class="highway__img-label">
+            <div class="highway__rectangle"></div>
+            <div class="highway__vector"></div>
+          </div>
+          <img src="./images/road-mount.jpg" alt="дорога в горах" class="highway__pic">
+          <img src="./images/road-forest.jpg" alt="дорога в лесу" class="highway__pic">
+        </div>
+        <div class="highway__selector">
+          <button class="highway__btn highway__btn_left"></button>
+          <button class="highway__btn highway__btn_right"></button>
+        </div>
+      </section>
+      <section class="bikes">
+        <h2 class="bikes__title">Велосипеды</h2>
+        <select name="categories" class="bikes__category-selector">
+          <option class="bikes__category-option" value="1">Шоссе</option>
+          <option class="bikes__category-option" value="2">Грэвел</option>
+          <option class="bikes__category-option" value="3">TT</option>
+        </select>
+        <ul class="bikes__categories">
+          <li>
+            <a href="#" class="bikes__category link-hover">Шоссе</a>
+          </li>
+          <li>
+            <a href="#" class="bikes__category bikes__category_inactive">Грэвел</a>
+          </li>
+          <li>
+            <a href="#" class="bikes__category bikes__category_inactive">TT</a>
+          </li>
+        </ul>
+        <div class="bikes__cards">
+          <a href="https://www.sigmasports.com/item/Cervelo/Caledonia-5-Ultegra-Disc-Road-Bike-2021/RDEN"
+             class="bikes__card" target="_blank">
+            <div class="bikes__img-container">
+              <img src="./images/cervelo-caledonia-5.jpg" class="bikes__img" alt="велосипед Cervelo Caledonia-5">
+            </div>
+            <h3 class="bikes__card-title link-hover">Cervelo Caledonia-5</h3>
+          </a>
+          <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
+             class="bikes__card bikes__card_hidden" target="_blank">
+            <div class="bikes__img-container">
+              <img src="./images/cannondale-systemsix-himod.jpg" class="bikes__img"
+                   alt="велосипед Cannondale Systemsix Himod">
+            </div>
+            <h3 class="bikes__card-title link-hover">Cannondale Systemsix Himod</h3>
+          </a>
+          <a href="https://www.sigmasports.com/item/Trek/Domane-SL-7-Force-eTap-AXS-Disc-Road-Bike-2021/RULF"
+             class="bikes__card bikes__card_hidden" target="_blank">
+            <div class="bikes__img-container">
+              <img src="./images/trek-domane-sl-7.jpg" class="bikes__img" alt="велосипед Trek Domane SL-7">
+            </div>
+            <h3 class="bikes__card-title link-hover">Trek Domane SL-7</h3>
+          </a>
+        </div>
+      </section>
+      <section class="training">
+        <h2 class="training__title">Тренировки</h2>
+        <img src="./images/training-way.jpg" class="training__img" alt="дорога">
+        <p class="training__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
+          записать эти тренировки поможет приложение Strava, а также это приложение позволит построить тренировочный
+          план.</p>
+        <ul class="training__links">
+          <li>
+            <a href="https://www.strava.com" class="training__link link-hover" target="_blank">Strava</a>
+          </li>
+          <li>
+            <a href="https://www.komoot.com" class="training__link link-hover" target="_blank">Komoot</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <h2 class="footer__title">Подпишитесь на рассылку&nbsp;&mdash;</h2>
+      <form class="footer__form">
+        <input type="email" placeholder="Ваш e-mail" name="e-mail" class="footer__input-email">
+        <button type="submit" class="footer__submit-btn">ok</button>
+      </form>
+      <p class="footer__copyright">© Road Club 2023</p>
+    </footer>
+  </div>
+</body>
+</html>
