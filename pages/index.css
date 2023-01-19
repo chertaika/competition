@@ -689,6 +689,15 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .bikes {
+    flex-direction: column;
+    padding-right: 0;
+    padding-left: 0;
+    gap: 20px;
+  }
+}
+
 .bikes__title {
   font-weight: 700;
   font-size: 55px;
@@ -703,20 +712,28 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .bikes__title {
+    font-size: 10vw;
+    line-height: 125%;
+  }
+}
+
 .bikes__category-selector {
-  width: 114px;
-  height: 33px;
+  /*height: 33px;*/
+  aspect-ratio: 19/5;
   border: 1px solid #E3E3E3;
   border-radius: 2px;
   font-weight: 600;
-  font-size: 11px;
-  line-height: 14px;
+  font-size: 3.4vw;
+  line-height: 127%;
   padding: 8px 12px;
   background-color: transparent;
   color: #fff;
   appearance: none;
   background-image: url("../images/arrow.svg");
   background-repeat: no-repeat;
+  background-size: 11%;
   background-position: center;
   background-position-x: calc(100% - 12px);
   outline: none;
@@ -726,6 +743,8 @@
 @media screen and (max-width: 767px) {
   .bikes__category-selector {
     display: block;
+    margin-top: 20px;
+    width: 40%;
   }
 }
 
@@ -788,8 +807,30 @@
   }
 }
 
+@media screen and (max-width: 767px) {
+  .bikes__cards {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}
+
 .bikes__card {
   text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__card {
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .bikes__card_hidden {
+    display: none;
+  }
 }
 
 .bikes__img-container {
@@ -802,6 +843,16 @@
 
 .bikes__img-container:hover {
   box-shadow: 0 20px 140px rgba(0, 0, 0, 0.11);
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__img-container {
+    box-shadow: none;
+    padding-bottom: 0;
+  }
+  .bikes__img-container:hover {
+    box-shadow: none;
+  }
 }
 
 .bikes__img {
@@ -829,6 +880,17 @@
     font-size: 1.4vw;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .bikes__card-title {
+    text-align: center;
+    font-size: 4.4vw;
+    line-height: 129%;
+    margin: 3px 0 16px;
+    color: #151515;
+  }
+}
+
 
 .training {
   padding: 90px 120px 120px;
