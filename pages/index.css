@@ -903,6 +903,29 @@
   }
 }
 
+.bikes__paginator {
+  display: none;
+  gap: 1.6vw;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__paginator {
+    display: flex;
+  }
+}
+
+.bikes__paginator-btn {
+  width: 1.3vw;
+  aspect-ratio: 1/1;
+  background-color: #cacaca;
+  border-radius: 50%;
+}
+
+.bikes__paginator-btn_active {
+  background-color: #151515;
+}
+
 
 .training {
   padding: 90px 120px 120px;
