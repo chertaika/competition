@@ -593,7 +593,7 @@
 }
 
 .highway__rectangle {
-  background-image: url(../images/Rectangle.svg);
+  background-image: url(../images/rectangle.svg);
   background-repeat: no-repeat;
   background-size: contain;
   width: 100px;
