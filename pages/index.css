@@ -103,6 +103,7 @@
   align-self: center;
   gap: 120px;
   padding-top: 75px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1023px) {
@@ -356,7 +357,7 @@
   display: flex;
   padding: 0 120px;
   gap: 80px;
-  justify-items: start;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 1023px) {
@@ -364,6 +365,7 @@
     padding-left: 60px;
     padding-right: 60px;
     gap: 40px;
+    width: 100%;
   }
 }
 
@@ -376,7 +378,7 @@
 }
 
 .biker__img {
-  width: 45%;
+  width: 55%;
   max-width: 650px;
   aspect-ratio: 10 / 7;
   pointer-events: none;
@@ -395,6 +397,13 @@
   padding: 0;
   margin: 0;
   justify-content: space-between;
+  width: 39.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .biker__quote {
+    width: 100%;
+  }
 }
 
 .biker__quote-text {
@@ -468,6 +477,7 @@
   padding-left: 120px;
   display: grid;
   row-gap: 50px;
+  overflow-x: hidden;
   grid-template-areas:
     "title"
     "subtitle"
@@ -549,7 +559,6 @@
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
   box-sizing: border-box;
-  overflow-x: hidden;
   grid-area: img;
 }
 
@@ -576,6 +585,7 @@
 }
 
 .highway__pic {
+  width: 650px;
   aspect-ratio: 13 / 8;
   object-fit: cover;
   object-position: center;
@@ -588,7 +598,7 @@
   }
 
   .highway__pic {
-    max-width: 731px;
+    width: 100%;
   }
 }
 
