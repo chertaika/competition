@@ -1,0 +1,27 @@
+.bikes__category-selector {
+  aspect-ratio: 19/5;
+  border: 1px solid #E3E3E3;
+  border-radius: 2px;
+  font-weight: 600;
+  font-size: 3.4vw;
+  line-height: 127%;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: #fff;
+  appearance: none;
+  background-image: url(../../../images/arrow.svg);
+  background-repeat: no-repeat;
+  background-size: 11%;
+  background-position: center;
+  background-position-x: calc(100% - 12px);
+  outline: none;
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__category-selector {
+    display: block;
+    margin-top: 20px;
+    width: 40%;
+  }
+}

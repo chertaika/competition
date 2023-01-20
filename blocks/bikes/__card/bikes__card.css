@@ -1,0 +1,17 @@
+.bikes__card {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__card {
+    background-color: #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__card_hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+.biker__quote-text {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 129%;
+  letter-spacing: -0.5px;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .biker__quote-text {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .biker__quote-text {
+    font-size: 7.2vw;
+    line-height: 126%;
+  }
+}

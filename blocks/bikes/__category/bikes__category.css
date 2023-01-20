@@ -1,0 +1,9 @@
+.bikes__category {
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+  text-decoration: none;
+  transition: opacity .25s;
+  opacity: 1;
+}

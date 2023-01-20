@@ -1,0 +1,19 @@
+.biker__quote-author {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 160%;
+  margin: 0;
+}
+
+@media screen and (max-width: 1279px) {
+  .biker__quote-author {
+    font-size: 1.95vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .biker__quote-author {
+    font-size: 4.4vw;
+    line-height: 157%;
+  }
+}

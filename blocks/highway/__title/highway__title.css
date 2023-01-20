@@ -1,0 +1,21 @@
+.highway__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 60px;
+  letter-spacing: -0.5px;
+  grid-area: title;
+}
+
+@media screen and (max-width: 1023px) {
+  .highway__title {
+    font-size: 5.4vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .highway__title {
+    font-size: 10vw;
+    line-height: 125%;
+  }
+}

@@ -1,0 +1,21 @@
+.training__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  color: rgba(229, 229, 229, .7);
+  margin: 0;
+  grid-area: subtitle;
+}
+
+@media screen and (max-width: 1023px) {
+  .training__subtitle {
+    font-size: 1.8vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .training__subtitle {
+    font-size: 3.75vw;
+    line-height: 150%;
+  }
+}

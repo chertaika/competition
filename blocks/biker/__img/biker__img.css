@@ -1,0 +1,13 @@
+.biker__img {
+  width: 55%;
+  max-width: 650px;
+  aspect-ratio: 10 / 7;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  .biker__img {
+    width: 100%;
+    max-width: none;
+  }
+}

@@ -1,0 +1,11 @@
+.bikes__paginator {
+  display: none;
+  gap: 1.6vw;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__paginator {
+    display: flex;
+  }
+}

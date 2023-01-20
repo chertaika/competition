@@ -1,0 +1,20 @@
+.bikes__categories {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  list-style-type: none;
+  margin: 0 0 6px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .bikes__categories {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__categories {
+    display: none;
+  }
+}

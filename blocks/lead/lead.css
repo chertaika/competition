@@ -1,0 +1,35 @@
+.lead {
+  max-width: 1440px;
+  display: grid;
+  padding-left: 120px;
+  padding-top: 20px;
+  grid-template-columns: 46fr 81fr;
+  gap: 50px;
+  grid-template-areas:
+    "title img"
+    "subtitle img"
+    "btn img"
+    "bike img";
+  grid-template-rows: minmax(180px, auto) minmax(112px, auto) 50px 1fr;
+}
+
+@media screen and (max-width: 1023px) {
+  .lead {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lead {
+    grid-template-areas:
+      "title"
+      "img"
+      "subtitle"
+      "btn";
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-left: 0;
+    padding-top: 40px;
+    grid-template-rows: none;
+  }
+}

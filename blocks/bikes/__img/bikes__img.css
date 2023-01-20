@@ -1,0 +1,9 @@
+.bikes__img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 20px;
+  object-fit: contain;
+  object-position: center;
+  pointer-events: none;
+}

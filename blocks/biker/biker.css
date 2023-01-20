@@ -1,0 +1,23 @@
+.biker {
+  display: flex;
+  padding: 0 120px;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+  .biker {
+    padding-left: 60px;
+    padding-right: 60px;
+    gap: 40px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .biker {
+    flex-direction: column;
+    padding: 19px 0 0;
+    border-top: 1px solid rgba(277, 277, 277, .5);
+  }
+}

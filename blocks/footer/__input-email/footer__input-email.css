@@ -1,0 +1,29 @@
+.footer__input-email {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 20px;
+  background-color: transparent;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 215%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.footer__input-email:focus {
+  outline: none;
+}
+
+.footer__input-email::placeholder {
+  color: rgba(255, 255, 255, .5);
+  transition: .25s;
+}
+
+.footer__input-email:hover::placeholder {
+  color: #fff;
+}
+
+.footer__input-email:focus::placeholder {
+  color: transparent;
+}

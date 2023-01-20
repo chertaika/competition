@@ -1,0 +1,14 @@
+.training__links {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+  grid-area: links;
+  align-self: end;
+}
+
+@media screen and (max-width: 767px) {
+  .training__links {
+  }
+}

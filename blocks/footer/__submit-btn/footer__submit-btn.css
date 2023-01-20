@@ -1,0 +1,11 @@
+.footer__submit-btn {
+  display: none;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 215%;
+  border: none;
+  padding: 0 22px 0;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+}

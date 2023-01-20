@@ -1,0 +1,22 @@
+.lead__img-container {
+  width: 100%;
+  background-image: url(../../../images/lead-background.jpg);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  grid-area: img;
+}
+@media screen and (max-width: 1210px) {
+  .lead__img-container {
+    background-position-x: 50px;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lead__img-container {
+    background-position-x: right;
+    background-size: contain;
+    aspect-ratio: 71/87
+  }
+}

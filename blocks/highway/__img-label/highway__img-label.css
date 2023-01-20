@@ -1,0 +1,11 @@
+.highway__img-label {
+  position: absolute;
+  left: 0;
+  bottom: 4%;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__img-label {
+    bottom: 8%;
+  }
+}

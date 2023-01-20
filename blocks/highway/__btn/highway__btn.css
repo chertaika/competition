@@ -1,0 +1,24 @@
+.highway__btn {
+  background-color: #434343;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  transition: .25s;
+  cursor: pointer;
+  background-image: url(../../../images/left.svg);
+}
+
+.highway__btn:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__btn {
+    width: 26%;
+    background-size: 26%;
+  }
+}

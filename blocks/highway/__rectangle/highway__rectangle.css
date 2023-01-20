@@ -1,0 +1,16 @@
+.highway__rectangle {
+  background-image: url(../../../images/rectangle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100px;
+  aspect-ratio: 5/2;
+  position: relative;
+  left: 0;
+  top: -13.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__rectangle {
+    width: 21.5vw;
+  }
+}

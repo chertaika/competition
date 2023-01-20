@@ -1,0 +1,20 @@
+.bikes__cards {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 117px;
+}
+
+@media screen and (max-width: 1023px) {
+  .bikes__cards {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .bikes__cards {
+    margin-top: 0;
+    flex-direction: column;
+  }
+}

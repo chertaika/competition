@@ -1,0 +1,25 @@
+.header__menu-options {
+  padding: 120px 0 0;
+  margin: 0;
+  width: 100%;
+  height: calc(100vh - 74px);
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 500;
+  font-size: 5.6vw;
+  line-height: 100%;
+  gap: 10.1vw;
+  transform: translateY(-100%);
+  animation: dropdown 1s forwards;
+  list-style-type: none;
+}
+
+@keyframes dropdown {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

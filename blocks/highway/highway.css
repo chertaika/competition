@@ -1,0 +1,30 @@
+.highway {
+  padding-left: 120px;
+  display: grid;
+  row-gap: 50px;
+  overflow-x: hidden;
+  grid-template-areas:
+    "title"
+    "subtitle"
+    "img"
+    "btn";
+}
+
+@media screen and (max-width: 1023px) {
+  .highway {
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .highway {
+    padding-left: 0;
+    grid-template-areas:
+      "title btn"
+      "img img"
+      "subtitle subtitle";
+    row-gap: 40px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(277, 277, 277, .5);
+  }
+}

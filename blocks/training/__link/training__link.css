@@ -1,0 +1,14 @@
+.training__link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 156%;
+}
+
+@media screen and (max-width: 767px) {
+  .training__link {
+    font-size: 4.4vw;
+    line-height: 143%;
+  }
+}

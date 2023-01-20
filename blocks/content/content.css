@@ -1,0 +1,21 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 120px;
+  padding-top: 75px;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1023px) {
+  .content {
+    gap: 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    gap: 80px;
+    padding: 74px 18px 0;
+  }
+}

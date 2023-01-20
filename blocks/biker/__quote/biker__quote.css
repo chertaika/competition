@@ -1,0 +1,14 @@
+.biker__quote {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  justify-content: space-between;
+  width: 39.5%;
+}
+
+@media screen and (max-width: 767px) {
+  .biker__quote {
+    width: 100%;
+  }
+}

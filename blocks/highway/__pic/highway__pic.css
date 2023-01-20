@@ -1,0 +1,19 @@
+.highway__pic {
+  width: 650px;
+  aspect-ratio: 13 / 8;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__pic {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .highway__pic_hidden {
+    display: none;
+  }
+}

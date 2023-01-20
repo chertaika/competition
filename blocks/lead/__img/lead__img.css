@@ -1,0 +1,9 @@
+.lead__img {
+  width: 77.27%;
+  aspect-ratio: 17/13;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 20px;
+  pointer-events: none;
+}

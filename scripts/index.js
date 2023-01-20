@@ -1,17 +1,28 @@
-const menu = document.querySelector('.header__menu');
-const menuButton = document.querySelector('.header__menu-btn');
-const menuLinks = menu.querySelectorAll('a[href^="#"]');
-const mobileMenuOptions = document.querySelectorAll('.header__menu-option');
-const moreButton = document.querySelector('.lead__more-btn');
-const bikeCategories = document.querySelectorAll('.bikes__category');
-const submitButton = document.querySelector('.footer__submit-btn');
-const menuList = document.querySelector('.header__menu-options');
+const menu = document.querySelector('.header__menu'),
+      menuButton = document.querySelector('.header__menu-btn'),
+      menuLinks = menu.querySelectorAll('a[href^="#"]'),
+      mobileMenuOptions = document.querySelectorAll('.header__menu-option'),
+      moreButton = document.querySelector('.lead__more-btn'),
+      bikeCategories = document.querySelectorAll('.bikes__category'),
+      submitButton = document.querySelector('.footer__submit-btn'),
+      menuList = document.querySelector('.header__menu-options');
 
+//отображение меню
+showMenu = () => {
+  menuList.style.display = "flex";
+  menuButton.classList.add('header__menu-btn_close');
+};
+
+//скрытие меню
+hideMenu = () => {
+  menuList.style.display = "none";
+  menuButton.classList.remove('header__menu-btn_close');
+};
 
 // скрывается мобильное меню при переходе по якорной ссылке
 for (const link of mobileMenuOptions) {
   link.addEventListener('click', () => {
-    menuList.style.display = "none";
+    hideMenu()
   });
 }
 
@@ -40,16 +51,11 @@ for (const category of bikeCategories) {
 
 //появление меню при нажатии на кнопку вызова
 menuButton.addEventListener('click', (event) => {
-  if (!event.target.classList.contains('header__menu-close')) {
-    menuList.style.display = "flex";
+  if (event.target.classList.contains('header__menu-btn_close')) {
+    hideMenu();
   } else {
-    menuList.style.display = "none";
+    showMenu();
   }
-});
-
-//изменение кнопки вызова меню
-menuButton.addEventListener('click', (event) => {
-  event.target.classList.toggle('header__menu-close');
 });
 
 // отмена обновления страницы при нажатии на кнопку Подробнее без ссылки

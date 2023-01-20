@@ -1,0 +1,31 @@
+.lead__more-btn {
+  width: 180px;
+  height: 50px;
+  background-color: #24b47e;
+  background-image: linear-gradient(#319e75, #319e75);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size .5s;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 129%;
+  text-align: center;
+  letter-spacing: 1px;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  grid-area: btn;
+}
+
+@media screen and (max-width: 767px) {
+  .lead__more-btn {
+    width: 284px;
+    height: 46px;
+  }
+}
+
+.lead__more-btn:hover {
+  background-size: 100% 100%;
+}

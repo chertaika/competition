@@ -1,0 +1,19 @@
+.lead__bike {
+  margin: 117px 0 0;
+  grid-area: bike;
+  display: flex;
+  align-items: center;
+  align-self: start;
+}
+
+@media screen and (max-width: 1279px) {
+  .lead__bike {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lead__bike {
+    display: none;
+  }
+}

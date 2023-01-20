@@ -1,0 +1,14 @@
+.lead__bike-name {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #fff;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 1279px) {
+  .lead__bike-name {
+    font-size: 1.4vw;
+  }
+}

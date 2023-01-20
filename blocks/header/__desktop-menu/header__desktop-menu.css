@@ -1,0 +1,16 @@
+.header__desktop-menu {
+  padding: 28px 120px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header__desktop-menu {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__desktop-menu {
+    display: none;
+  }
+}

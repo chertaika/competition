@@ -1,0 +1,14 @@
+.training__img {
+  max-width: 580px;
+  width: 100%;
+  grid-area: img;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px) {
+  .training__img {
+    font-size: 10vw;
+    line-height: 125%;
+    max-width: none;
+  }
+}

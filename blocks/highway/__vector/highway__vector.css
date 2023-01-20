@@ -1,0 +1,17 @@
+.highway__vector {
+  width: 50px;
+  aspect-ratio: 35/12;
+  background-image: url(../../../images/vector.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  left: 14%;
+  bottom: 28%;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__vector {
+    width: 10.94vw;
+  }
+}

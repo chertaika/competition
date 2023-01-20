@@ -1,0 +1,8 @@
+.header {
+  max-width: 1440px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #333;
+  z-index: 1;
+}

@@ -1,0 +1,23 @@
+.biker__quote-author-subline {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 175%;
+  color: #e5e5e5;
+  opacity: 0.7;
+  margin: 0;
+  padding-top: 6px;
+}
+
+@media screen and (max-width: 1279px) {
+  .biker__quote-author-subline {
+    font-size: 1.57vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .biker__quote-author-subline {
+    font-size: 3.2vw;
+    line-height: 160%;
+    padding-top: 4px;
+  }
+}

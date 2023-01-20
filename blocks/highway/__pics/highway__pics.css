@@ -1,0 +1,18 @@
+.highway__pics {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  box-sizing: border-box;
+  grid-area: img;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__pics {
+    font-size: 3.75vw;
+    line-height: 150%;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+  }
+}
