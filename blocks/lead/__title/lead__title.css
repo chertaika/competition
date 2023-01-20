@@ -5,7 +5,7 @@
   line-height: 109%;
   letter-spacing: -0.5px;
   grid-area: title;
-  align-self: end;
+  align-self: flex-end;
 }
 
 @media screen and (max-width: 1023px) {

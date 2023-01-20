@@ -7,7 +7,7 @@
 
 @media screen and (max-width: 767px) {
   .highway__selector {
-    justify-content: end;
+    justify-content: flex-end;
     gap: 10px;
   }
 }
