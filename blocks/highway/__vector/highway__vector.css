@@ -5,9 +5,9 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  left: 14%;
-  bottom: 28%;
+  position: relative;
+  left: 15%;
+  top: 30%;
 }
 
 @media screen and (max-width: 767px) {

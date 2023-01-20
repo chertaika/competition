@@ -4,13 +4,14 @@
   background-size: contain;
   width: 100px;
   aspect-ratio: 5/2;
-  position: relative;
+  position: absolute;
   left: 0;
-  top: -13.5%;
+  bottom: 4%;
 }
 
 @media screen and (max-width: 767px) {
   .highway__rectangle {
     width: 21.5vw;
+    bottom: 8%;
   }
 }
