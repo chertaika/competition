@@ -11,41 +11,43 @@
 <body class="body">
   <div class="page">
     <header class="header">
-      <nav class="header__mobile-menu">
-        <input class="header__menu-btn" type="checkbox" id="menu">
-        <label class="header__menu-navicon" for="menu"></label>
-        <ul class="header__menu-options">
-          <li>
-            <a href="#highway" onclick="location.reload()" class="header__menu-option">Покрытия и градиенты</a>
-          </li>
-          <li>
-            <a href="#bikes" onclick="location.reload()" class="header__menu-option">Велосипеды</a>
-          </li>
-          <li>
-            <a href="#training" onclick="location.reload()" class="header__menu-option">Тренировки</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="header__menu">
-        <ul class="header__menu-links">
-          <li>
-            <a href="#highway" class="header__menu-link link-hover">Покрытия и градиенты</a>
-          </li>
-          <li>
-            <a href="#bikes" class="header__menu-link link-hover">Велосипеды</a>
-          </li>
-          <li>
-            <a href="#training" class="header__menu-link link-hover">Тренировки</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__menu">
+        <nav class="header__desktop-menu">
+          <ul class="header__menu-links">
+            <li>
+              <a href="#highway" class="header__menu-link link-hover">Покрытия и градиенты</a>
+            </li>
+            <li>
+              <a href="#bikes" class="header__menu-link link-hover">Велосипеды</a>
+            </li>
+            <li>
+              <a href="#training" class="header__menu-link link-hover">Тренировки</a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="header__mobile-menu">
+          <input class="header__menu-btn" type="checkbox" id="menu">
+          <label class="header__menu-navicon" for="menu"></label>
+          <ul class="header__menu-options">
+            <li>
+              <a href="#highway" class="header__menu-option">Покрытия и градиенты</a>
+            </li>
+            <li>
+              <a href="#bikes" class="header__menu-option">Велосипеды</a>
+            </li>
+            <li>
+              <a href="#training" class="header__menu-option">Тренировки</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="content">
       <section class="lead">
         <h1 class="lead__title">Шоссе, ТТ и&nbsp;Грэвел</h1>
         <p class="lead__subtitle">Триатлонные старты, горные серпантины или грейвел заезды по живописным маршрутам –
           нужно только определиться с выбором велосипеда и отправиться в путь.</p>
-        <button onclick="window.location.href = '#'" class="lead__more-btn">Подробнее</button>
+        <button class="lead__more-btn">Подробнее</button>
         <div class="lead__bike">
           <a href="https://www.sigmasports.com/item/Cannondale/SystemSix-HiMOD-Ultegra-Di2-Disc-Road-Bike-2021/R82J"
              class="lead__bike-name link-hover" target="_blank">Cannondale Systemsix</a>
@@ -163,5 +165,6 @@
       <p class="footer__copyright">© Road Club 2023</p>
     </footer>
   </div>
+  <script src="./scripts/index.js"></script>
 </body>
 </html>
