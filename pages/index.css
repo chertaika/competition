@@ -76,7 +76,7 @@
   padding: 26px 13px;
   display: none;
   flex-direction: column;
-  align-items: end;
+  align-items: flex-end;
   background-color: #333;
 }
 
@@ -86,7 +86,7 @@
   }
 }
 
-.header__menu-navicon {
+.header__menu-btn {
   display: block;
   width: 23px;
   height: 22px;
@@ -95,16 +95,11 @@
   background-repeat: no-repeat;
   background-position: center;
   transition: .3s ease-in-out;
-}
-.header__menu-btn {
-  display: none;
-}
-
-.header__menu-btn:checked ~ .header__menu-options {
-  display: flex;
+  background-color: transparent;
+  border: none;
 }
 
-.header__menu-btn:checked ~ .header__menu-navicon {
+.header__menu-close {
   background-image: url("../images/close-btn.svg");
 }
 
@@ -803,7 +798,7 @@
 
 .bikes__categories {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   gap: 40px;
   list-style-type: none;
   margin: 0 0 6px;
@@ -1155,10 +1150,6 @@
 .footer__input-email:focus {
   outline: none;
 }
-
-/*.footer__input-email:focus + .footer__submit-btn {*/
-/*  display: block;*/
-/*}*/
 
 .footer__input-email::placeholder {
   color: rgba(255, 255, 255, .5);
