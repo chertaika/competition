@@ -11,17 +11,31 @@
 <body class="body">
   <div class="page">
     <header class="header">
+      <nav class="header__mobile-menu">
+        <input class="header__menu-btn" type="checkbox" id="menu">
+        <label class="header__menu-navicon" for="menu"></label>
+        <ul class="header__menu-options">
+          <li>
+            <a href="#highway" onclick="location.reload()" class="header__menu-option">Покрытия и градиенты</a>
+          </li>
+          <li>
+            <a href="#bikes" onclick="location.reload()" class="header__menu-option">Велосипеды</a>
+          </li>
+          <li>
+            <a href="#training" onclick="location.reload()" class="header__menu-option">Тренировки</a>
+          </li>
+        </ul>
+      </nav>
       <nav class="header__menu">
-        <button class="header__menu-btn"></button>
         <ul class="header__menu-links">
           <li>
-            <a href="#" class="header__menu-link link-hover">Покрытия и градиенты</a>
+            <a href="#highway" class="header__menu-link link-hover">Покрытия и градиенты</a>
           </li>
           <li>
-            <a href="#" class="header__menu-link link-hover">Велосипеды</a>
+            <a href="#bikes" class="header__menu-link link-hover">Велосипеды</a>
           </li>
           <li>
-            <a href="#" class="header__menu-link link-hover">Тренировки</a>
+            <a href="#training" class="header__menu-link link-hover">Тренировки</a>
           </li>
         </ul>
       </nav>
@@ -58,7 +72,7 @@
           </figcaption>
         </figure>
       </section>
-      <section class="highway">
+      <section class="highway" id="highway">
         <h2 class="highway__title">Шоссе</h2>
         <p class="highway__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
           или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.
@@ -76,7 +90,7 @@
           <button class="highway__btn highway__btn_right"></button>
         </div>
       </section>
-      <section class="bikes">
+      <section class="bikes" id="bikes">
         <h2 class="bikes__title">Велосипеды</h2>
         <select name="categories" class="bikes__category-selector">
           <option class="bikes__category-option" value="1">Шоссе</option>
@@ -124,7 +138,7 @@
           <div class="bikes__paginator-btn"></div>
         </div>
       </section>
-      <section class="training">
+      <section class="training" id="training">
         <h2 class="training__title">Тренировки</h2>
         <img src="./images/training-way.jpg" class="training__img" alt="дорога">
         <p class="training__subtitle">Чтобы найти маршрут для тренировки можно воспользоваться сервисом Komoot, а
