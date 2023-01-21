@@ -35,6 +35,7 @@
 @import "../blocks/highway/__subtitle/highway__subtitle.css";
 @import "../blocks/highway/__pics/highway__pics.css";
 @import "../blocks/highway/__pic/highway__pic.css";
+@import "../blocks/highway/__pic/_hidden/highway__pic_hidden.css";
 @import "../blocks/highway/__rectangle/highway__rectangle.css";
 @import "../blocks/highway/__vector/highway__vector.css";
 @import "../blocks/highway/__selector/highway__selector.css";
