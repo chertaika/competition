@@ -80,15 +80,25 @@
         <p class="highway__subtitle">На шоссейном велосипеде можно ездить по асфальту на разных градиентах: будь то горы
           или равнины. Гонки проходят в командном пелотоне, но тренироваться можно и самостоятельно.
         </p>
-        <div class="highway__pics">
+        <div class="highway__carousel">
           <div class="highway__rectangle">
             <div class="highway__vector"></div>
           </div>
-          <img src="./images/road-mount.jpg" alt="дорога в горах" class="highway__pic">
-          <img src="./images/road-forest.jpg" alt="дорога в лесу" class="highway__pic highway__pic_hidden">
+          <div class="highway__slide current-slide">
+            <img src="./images/road-mount.jpg" alt="дорога в горах" class="highway__pic">
+          </div>
+          <div class="highway__slide">
+            <img src="./images/road-forest.jpg" alt="дорога в лесу" class="highway__pic">
+          </div>
+          <div class="highway__slide">
+            <img src="./images/road-village.jpg" alt="дорога в горах" class="highway__pic">
+          </div>
+          <div class="highway__slide">
+            <img src="./images/training-way.jpg" alt="дорога в горах" class="highway__pic">
+          </div>
         </div>
         <div class="highway__selector">
-          <button class="highway__btn"></button>
+          <button class="highway__btn highway__btn_left"></button>
           <button class="highway__btn highway__btn_right"></button>
         </div>
       </section>

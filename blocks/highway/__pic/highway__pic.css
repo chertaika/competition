@@ -1,13 +1,14 @@
 .highway__pic {
-  width: 650px;
-  aspect-ratio: 13 / 8;
   object-fit: cover;
   object-position: center;
   pointer-events: none;
+  display: block;
+  width: 650px;
+  aspect-ratio: 13 / 8;
 }
 
 @media screen and (max-width: 767px) {
   .highway__pic {
-    width: 100%;
+    width: calc(100vw - 36px);
   }
 }

@@ -2,7 +2,6 @@
   padding-left: 120px;
   display: grid;
   row-gap: 50px;
-  overflow-x: hidden;
   grid-template-areas:
     "title"
     "subtitle"

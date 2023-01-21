@@ -5,7 +5,11 @@ const menu = document.querySelector('.header__menu'),
       moreButton = document.querySelector('.lead__more-btn'),
       bikeCategories = document.querySelectorAll('.bikes__category'),
       submitButton = document.querySelector('.footer__submit-btn'),
-      menuList = document.querySelector('.header__menu-options');
+      menuList = document.querySelector('.header__menu-options'),
+      slidesContainer = document.querySelector(".highway__carousel"),
+      prevButton = document.querySelector('.highway__btn_left'),
+      nextButton = document.querySelector('.highway__btn_right');
+let touchStart;
 
 //отображение меню
 showMenu = () => {
@@ -69,5 +73,40 @@ document.addEventListener('click', (event) => {
     submitButton.style.display = "block";
   } else {
     submitButton.style.display = "none";
+  }
+});
+
+swipeSlide = (forward) => {
+  let currentSlide = slidesContainer.querySelector('.current-slide');
+  let nextSlide = slidesContainer.querySelector('.current-slide').nextElementSibling;
+  let currentPosition = currentSlide.getBoundingClientRect().left;
+  let nextPosition = nextSlide.getBoundingClientRect().left;
+  if (forward) {
+    slidesContainer.scrollLeft += nextPosition - currentPosition;
+  } else {
+    slidesContainer.scrollLeft -= nextPosition - currentPosition;
+  }
+}
+
+//смещение слайда по клику на кнопки
+nextButton.addEventListener("click", () => {
+  swipeSlide(true);
+});
+
+prevButton.addEventListener("click", () => {
+  swipeSlide(false);
+});
+
+//смещение слайда тапом по сенсорному экрану
+slidesContainer.addEventListener("touchstart", (e) => {
+  touchStart = e.touches[0].clientX;
+});
+
+slidesContainer.addEventListener("touchend", (e) => {
+  let touchEnd = e.changedTouches[0].clientX;
+  if (touchStart > touchEnd) {
+    swipeSlide(true);
+  } else {
+    swipeSlide(false);
   }
 });
