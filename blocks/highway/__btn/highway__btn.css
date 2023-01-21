@@ -9,7 +9,7 @@
   padding: 0;
   transition: .25s;
   cursor: pointer;
-  background-image: url(../../../images/left.svg);
+  background-image: url("../../../images/left.svg");
 }
 
 .highway__btn:hover {

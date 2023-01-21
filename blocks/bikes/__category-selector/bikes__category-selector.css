@@ -9,7 +9,7 @@
   background-color: transparent;
   color: #fff;
   appearance: none;
-  background-image: url(../../../images/arrow.svg);
+  background-image: url("../../../images/arrow.svg");
   background-repeat: no-repeat;
   background-size: 11%;
   background-position: center;
