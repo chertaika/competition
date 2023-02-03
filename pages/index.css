@@ -61,7 +61,7 @@
 @import "../blocks/bikes/__card-title/bikes__card-title.css";
 @import "../blocks/bikes/__paginator/bikes__paginator.css";
 @import "../blocks/swiper-pagination-bullet/swiper-pagination-bullet.css";
-@import "../blocks/swiper-pagination-bullet_active/swiper-pagination-bullet_active.css";
+@import "../blocks/swiper-pagination-bullet-active/swiper-pagination-bullet-active.css";
 @import "../blocks/training/training.css";
 @import "../blocks/training/__title/training__title.css";
 @import "../blocks/training/__img/training__img.css";
