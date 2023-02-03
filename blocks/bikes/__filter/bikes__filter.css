@@ -1,0 +1,14 @@
+.bikes__filter {
+  font-size: 18px;
+  line-height: 156%;
+  text-decoration: none;
+  transition: opacity .25s;
+  cursor: pointer;
+  opacity: .7;
+  color: #e5e5e5;
+  font-weight: 400;
+}
+
+.bikes__filter:hover {
+  opacity: .6;
+}

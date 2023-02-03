@@ -1,0 +1,16 @@
+.highway__gradient {
+  width: 50px;
+  aspect-ratio: 25/8;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+  left: 15%;
+  top: 33%;
+}
+
+@media screen and (max-width: 767px) {
+  .highway__gradient {
+    width: 10.94vw;
+  }
+}

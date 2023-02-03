@@ -1,0 +1,6 @@
+@media screen and (max-width: 767px) {
+  .bikes__swiper {
+    overflow: hidden;
+    width: calc(100vw - 36px);
+  }
+}

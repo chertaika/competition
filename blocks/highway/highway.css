@@ -1,5 +1,4 @@
 .highway {
-  padding-left: 120px;
   display: grid;
   row-gap: 50px;
   grid-template-areas:
@@ -11,13 +10,11 @@
 
 @media screen and (max-width: 1023px) {
   .highway {
-    padding-left: 60px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .highway {
-    padding-left: 0;
     grid-template-areas:
       "title btn"
       "img img"

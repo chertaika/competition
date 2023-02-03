@@ -1,5 +1,5 @@
 .training {
-  padding: 90px 120px 120px;
+  padding: 90px 120px 120px 0;
   display: grid;
   grid-template-columns: 23fr 29fr;
   grid-template-rows: auto minmax(272px, auto) auto;
@@ -20,7 +20,6 @@
 @media screen and (max-width: 1023px) {
   .training {
     padding-right: 60px;
-    padding-left: 60px;
     grid-template-rows: auto minmax(155px, auto) auto;
     gap: 15px 40px;
   }

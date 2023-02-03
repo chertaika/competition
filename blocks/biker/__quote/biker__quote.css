@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   justify-content: space-between;
-  width: 39.5%;
+  width: calc(470/1200*100%);
 }
 
 @media screen and (max-width: 767px) {

@@ -1,5 +1,8 @@
 .bikes__card {
   text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -7,11 +10,13 @@
     background-color: #f4f4f4;
     border-radius: 20px;
     box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
+    width: calc(100vw - 36px);
   }
 }
 
 @media screen and (max-width: 767px) {
   .bikes__card_hidden {
     display: none;
+
   }
 }

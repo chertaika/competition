@@ -1,14 +1,8 @@
 .highway__carousel {
   display: flex;
-  gap: 40px;
-  overflow: hidden;
   position: relative;
-  grid-area: img;
-  scroll-behavior: smooth;
-}
-
-@media screen and (max-width: 767px){
-  .highway__carousel {
-    gap: 0;
-  }
+  transition: transform .5s ease-out;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }

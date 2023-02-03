@@ -8,6 +8,12 @@
   left: 0;
   bottom: 4%;
   z-index: 1;
+  opacity: 0;
+  transition: opacity .5s linear;
+}
+
+.swiper-slide-active .highway__rectangle {
+  opacity: 1;
 }
 
 @media screen and (max-width: 767px) {

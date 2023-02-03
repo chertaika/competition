@@ -5,11 +5,13 @@
   gap: 120px;
   padding-top: 75px;
   box-sizing: border-box;
+  padding-left: 120px;
 }
 
 @media screen and (max-width: 1023px) {
   .content {
     gap: 100px;
+    padding-left: 60px;
   }
 }
 

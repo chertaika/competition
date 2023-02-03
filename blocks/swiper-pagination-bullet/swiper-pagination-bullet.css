@@ -1,0 +1,6 @@
+.swiper-pagination-bullet {
+  width: 1.3vw;
+  aspect-ratio: 1/1;
+  background-color: #8a8a8a;
+  border-radius: 50%;
+}

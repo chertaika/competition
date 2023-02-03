@@ -1,6 +1,6 @@
 .bikes__img-container {
-  aspect-ratio: 1/1;
   padding: 20px;
+  aspect-ratio: 1/1;
   background-color: #f4f4f4;
   border-radius: 20px;
   box-shadow: 0 20px 140px rgba(0, 0, 0, 0.06);
@@ -13,7 +13,7 @@
 @media screen and (max-width: 767px) {
   .bikes__img-container {
     box-shadow: none;
-    padding-bottom: 0;
+    padding: 14.95px 14.95px 0;
   }
 
   .bikes__img-container:hover {

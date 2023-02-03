@@ -2,26 +2,33 @@ const menu = document.querySelector('.header__menu'),
       menuButton = document.querySelector('.header__menu-btn'),
       menuLinks = menu.querySelectorAll('a[href^="#"]'),
       mobileMenuOptions = document.querySelectorAll('.header__menu-option'),
-      moreButton = document.querySelector('.lead__more-btn'),
-      bikeCategories = document.querySelectorAll('.bikes__category'),
       submitButton = document.querySelector('.footer__submit-btn'),
       menuList = document.querySelector('.header__menu-options'),
-      slidesContainer = document.querySelector(".highway__carousel"),
-      prevButton = document.querySelector('.highway__btn_left'),
-      nextButton = document.querySelector('.highway__btn_right');
-let touchStart;
-
-//отображение меню
-showMenu = () => {
-  menuList.style.display = "flex";
-  menuButton.classList.add('header__menu-btn_close');
-};
-
-//скрытие меню
-hideMenu = () => {
-  menuList.style.display = "none";
-  menuButton.classList.remove('header__menu-btn_close');
-};
+      inputEmail = document.querySelector('.footer__input-email'),
+      filters = document.querySelectorAll('.bikes__filter'),
+      bikesCategories = document.querySelector('.bikes__categories');
+const roadsSlider = new Swiper(".highway__swiper", {
+  slidesPerView: "auto",
+  loop: true,
+  spaceBetween: 40,
+  navigation: {
+    nextEl: ".highway__btn_right",
+    prevEl: ".highway__btn_left"
+  }
+});
+const bikesSlider = new Swiper(".bikes__swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 30,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      spaceBetween: 0,
+    },
+  }
+});
 
 // скрывается мобильное меню при переходе по якорной ссылке
 for (const link of mobileMenuOptions) {
@@ -30,15 +37,27 @@ for (const link of mobileMenuOptions) {
   });
 }
 
-//плавная прокрутка страницы при переходе по якорной ссылке из меню с учетом высоты fixed элемента
+showMenu = () => {
+  menuList.style.display = "flex";
+  menuButton.classList.add('header__menu-btn_close');
+};
+
+hideMenu = () => {
+  menuList.style.display = "none";
+  menuButton.classList.remove('header__menu-btn_close');
+};
+
+//плавная прокрутка страницы по якорю с учетом высоты fixed элемента
 for (const link of menuLinks) {
-  link.addEventListener('click', function(event) {
+  link.addEventListener('click', function (event) {
     event.preventDefault();
-    let href = this.getAttribute('href').substring(1);
+
+    const href = this.getAttribute('href').substring(1);
     const scrollTarget = document.getElementById(href);
-    const topOffset = 75;
+    const topOffset = menu.getBoundingClientRect().bottom;
     const elementPosition = scrollTarget.getBoundingClientRect().top;
     const offsetPosition = elementPosition - topOffset;
+
     window.scrollBy({
       top: offsetPosition,
       behavior: 'smooth'
@@ -46,14 +65,25 @@ for (const link of menuLinks) {
   });
 }
 
-// отмена обновления страницы при нажатии на категорию без полной реализации блока
-for (const category of bikeCategories) {
-  category.addEventListener('click', (event) => {
-    event.preventDefault();
+//переключение категорий велосипедов
+for(const filter of filters) {
+  filter.addEventListener('click', function() {
+
+    let selectedFilter = filter.getAttribute('data-filter');
+    let itemsToHide = document.querySelectorAll(`.bikes__cards .bikes__slide:not([data-filter='${selectedFilter}'])`);
+    let itemsToShow = document.querySelectorAll(`.bikes__cards [data-filter='${selectedFilter}']`);
+
+    itemsToHide.forEach(element => {
+      element.classList.remove('bikes__slide_active');
+    });
+
+    itemsToShow.forEach(element => {
+      element.classList.add('bikes__slide_active');
+    });
+
   });
 }
 
-//появление меню при нажатии на кнопку вызова
 menuButton.addEventListener('click', (event) => {
   if (event.target.classList.contains('header__menu-btn_close')) {
     hideMenu();
@@ -62,51 +92,19 @@ menuButton.addEventListener('click', (event) => {
   }
 });
 
-// отмена обновления страницы при нажатии на кнопку Подробнее без ссылки
-moreButton.addEventListener('click', (event) => {
-  event.preventDefault();
-});
-
-//появление кнопки отправки формы при активации поля ввода e-mail
-document.addEventListener('click', (event) => {
-  if (event.target.classList.contains('footer__input-email')) {
+//появление кнопки отправки формы при заполнении поля ввода e-mail
+inputEmail.addEventListener('input', () => {
+  if (inputEmail.value !== "") {
     submitButton.style.display = "block";
   } else {
     submitButton.style.display = "none";
   }
 });
 
-swipeSlide = (forward) => {
-  let currentSlide = slidesContainer.querySelector('.current-slide');
-  let nextSlide = slidesContainer.querySelector('.current-slide').nextElementSibling;
-  let currentPosition = currentSlide.getBoundingClientRect().left;
-  let nextPosition = nextSlide.getBoundingClientRect().left;
-  if (forward) {
-    slidesContainer.scrollLeft += nextPosition - currentPosition;
-  } else {
-    slidesContainer.scrollLeft -= nextPosition - currentPosition;
-  }
-}
 
-//смещение слайда по клику на кнопки
-nextButton.addEventListener("click", () => {
-  swipeSlide(true);
-});
-
-prevButton.addEventListener("click", () => {
-  swipeSlide(false);
-});
-
-//смещение слайда тапом по сенсорному экрану
-slidesContainer.addEventListener("touchstart", (e) => {
-  touchStart = e.touches[0].clientX;
-});
-
-slidesContainer.addEventListener("touchend", (e) => {
-  let touchEnd = e.changedTouches[0].clientX;
-  if (touchStart > touchEnd) {
-    swipeSlide(true);
-  } else {
-    swipeSlide(false);
+bikesCategories.addEventListener('click', function({ target: t }) {
+  if (this !== t) {
+    [...this.children].forEach(n => n.classList.toggle('bikes__filter_active', n === t));
   }
 });
+

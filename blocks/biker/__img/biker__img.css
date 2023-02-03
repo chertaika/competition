@@ -1,5 +1,5 @@
 .biker__img {
-  width: 55%;
+  width: calc(650/1200*100%);
   max-width: 650px;
   aspect-ratio: 10 / 7;
   pointer-events: none;

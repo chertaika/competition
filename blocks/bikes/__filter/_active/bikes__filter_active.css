@@ -1,0 +1,9 @@
+.bikes__filter_active {
+  color: #fff;
+  font-weight: 600;
+  opacity: 1;
+}
+
+.bikes__filter_active:hover {
+  opacity: .75;
+}
