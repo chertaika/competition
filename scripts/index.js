@@ -6,7 +6,8 @@ const menu = document.querySelector('.header__menu'),
       menuList = document.querySelector('.header__menu-options'),
       inputEmail = document.querySelector('.footer__input-email'),
       filters = document.querySelectorAll('.bikes__filter'),
-      bikesCategories = document.querySelector('.bikes__categories');
+      bikesCards = document.querySelector('.bikes__cards'),
+      categorySelector = document.querySelector('.bikes__category-selector');
 const roadsSlider = new Swiper(".highway__swiper", {
   slidesPerView: "auto",
   loop: true,
@@ -37,16 +38,6 @@ for (const link of mobileMenuOptions) {
   });
 }
 
-showMenu = () => {
-  menuList.style.display = "flex";
-  menuButton.classList.add('header__menu-btn_close');
-};
-
-hideMenu = () => {
-  menuList.style.display = "none";
-  menuButton.classList.remove('header__menu-btn_close');
-};
-
 //плавная прокрутка страницы по якорю с учетом высоты fixed элемента
 for (const link of menuLinks) {
   link.addEventListener('click', function (event) {
@@ -67,23 +58,49 @@ for (const link of menuLinks) {
 
 //переключение категорий велосипедов
 for(const filter of filters) {
-  filter.addEventListener('click', function() {
+  filter.addEventListener('click', (event) => {
+    let currentButton = event.target;
+
+    if(currentButton.classList.contains('bikes__filter_active')) {
+      return false;
+    }
+
+    let activeButton = document.querySelector('.bikes__filter_active');
+    activeButton.classList.remove('bikes__filter_active');
+    currentButton.classList.add('bikes__filter_active');
 
     let selectedFilter = filter.getAttribute('data-filter');
-    let itemsToHide = document.querySelectorAll(`.bikes__cards .bikes__slide:not([data-filter='${selectedFilter}'])`);
-    let itemsToShow = document.querySelectorAll(`.bikes__cards [data-filter='${selectedFilter}']`);
-
-    itemsToHide.forEach(element => {
-      element.classList.remove('bikes__slide_active');
-    });
-
-    itemsToShow.forEach(element => {
-      element.classList.add('bikes__slide_active');
-    });
-
+    showCats(selectedFilter);
   });
 }
 
+//отображение меню
+showMenu = () => {
+  menuList.style.display = "flex";
+  menuButton.classList.add('header__menu-btn_close');
+};
+
+//скрытие меню
+hideMenu = () => {
+  menuList.style.display = "none";
+  menuButton.classList.remove('header__menu-btn_close');
+};
+
+//отображение только велосипедов выбранной категории
+showCats = (selectedFilter) => {
+  let itemsToHide = bikesCards.querySelectorAll('.bikes__slide_active');
+  let itemsToShow = bikesCards.querySelectorAll(`[data-filter="${selectedFilter}"]`);
+
+  for(const item of itemsToHide) {
+    item.classList.remove('bikes__slide_active');
+  }
+
+  for(const item of itemsToShow) {
+    item.classList.add('bikes__slide_active');
+  }
+}
+
+//отображение и скрытие меню кнопкой
 menuButton.addEventListener('click', (event) => {
   if (event.target.classList.contains('header__menu-btn_close')) {
     hideMenu();
@@ -101,10 +118,7 @@ inputEmail.addEventListener('input', () => {
   }
 });
 
-
-bikesCategories.addEventListener('click', function({ target: t }) {
-  if (this !== t) {
-    [...this.children].forEach(n => n.classList.toggle('bikes__filter_active', n === t));
-  }
-});
-
+//переключение категорий велосипедов в мобильной версии
+categorySelector.addEventListener('change', function (event) {
+  showCats(event.target.value);
+})
