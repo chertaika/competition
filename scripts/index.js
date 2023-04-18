@@ -89,7 +89,7 @@ hideMenu = () => {
 //отображение только велосипедов выбранной категории
 showCats = (selectedFilter) => {
   let itemsToHide = bikesCards.querySelectorAll('.bikes__slide_active');
-  let itemsToShow = bikesCards.querySelectorAll(`[data-filter="${selectedFilter}"]`);
+  let itemsToShow = bikesCards.querySelectorAll(`[data-filter='${selectedFilter}']`);
 
   for(const item of itemsToHide) {
     item.classList.remove('bikes__slide_active');
